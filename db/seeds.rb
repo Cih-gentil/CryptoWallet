@@ -1,0 +1,1 @@
+#Use o rails tasks dev:setup (lib/tasks/dev.rake)
