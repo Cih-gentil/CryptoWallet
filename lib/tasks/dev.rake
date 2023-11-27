@@ -8,8 +8,9 @@ namespace :dev do
         
       show_spinner("Migrando Banco de dados") {%x(rails db:migrate)}
       
-      %x(rails dev:add_coins)
+      %x(rails dev:add_mining_types)
 
+      %x(rails dev:add_coins)
        
     else 
     puts "Você não está no ambiente de deselvolvimento!"
@@ -22,15 +23,18 @@ namespace :dev do
   coins = [
     {discription: "Bitcoin",
     acronym: "BTC",
-    url_image: "https://images.rawpixel.com/image_png_600/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDIzLTAyL3JtNDY3LWNyeXB0b2N1cnJlbmN5LTAxMy5wbmc.png"
+    url_image: "https://images.rawpixel.com/image_png_600/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDIzLTAyL3JtNDY3LWNyeXB0b2N1cnJlbmN5LTAxMy5wbmc.png",
+    mining_type: MiningType.find_by(acronym: 'POW')
     },
     {discription: "Etherum",
     acronym: "ETH",
-    url_image: "https://upload.wikimedia.org/wikipedia/commons/b/b7/ETHEREUM-YOUTUBE-PROFILE-PIC.png"
+    url_image: "https://upload.wikimedia.org/wikipedia/commons/b/b7/ETHEREUM-YOUTUBE-PROFILE-PIC.png",
+    mining_type: MiningType.all.sample  
     },
     {discription: "Dash",
     acronym: "DASH",
-    url_image: "https://cryptologos.cc/logos/dash-dash-logo.png?v=026"
+    url_image: "https://cryptologos.cc/logos/dash-dash-logo.png?v=026",
+    mining_type: MiningType.all.sample  
     }
     ] 
 
@@ -40,7 +44,6 @@ namespace :dev do
    end
   end
 
-=begin
   desc "Cadastro de tipos de mineração"
   task add_mining_types: :environment do
     show_spinner("Cadastrando minerações") do 
@@ -51,9 +54,9 @@ namespace :dev do
     ]
     mining_types.each do |mining_type|
       MiningType.find_or_create_by!(mining_type)
-    end
-=end
-  
+    end  
+   end
+   end
 
 
     def show_spinner(msg_start, msg_end = "Concluído!")
