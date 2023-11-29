@@ -31,3 +31,10 @@
 
 en:
   hello: "Hello world"
+  links:
+      new: New crypto
+      show: Show
+      edit: Edit
+      delete: Delete
+      back: Back
+

@@ -1,0 +1,8 @@
+pt-BR:
+  hello: "Olá mundo!"
+  links:
+      new: Nova moeda
+      show: Mostrar
+      edit: Editar
+      delete: Apagar
+      back: Voltar
