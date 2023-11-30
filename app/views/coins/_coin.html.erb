@@ -2,17 +2,17 @@
 
 <p><strong><%= nome_aplicacao %></strong></p>
   <p>
-    <strong>Descrição:</strong>
+    <strong><%= @coins.human_attribute_name(:discription)%> </strong>
     <%= coin.discription %>
   </p>
 
   <p>
-    <strong>Sigla:</strong>
+  <strong><%= @coins.human_attribute_name(:acronym)%> </strong>
     <%= coin.acronym %>
   </p>
 
   <p>
-    <strong>Imagem:</strong>
+    <strong><%= @coins.human_attribute_name(:url_image)%> </strong>
     <%= image_tag coin.url_image, width:25, height:25 %>
   </p>
 
