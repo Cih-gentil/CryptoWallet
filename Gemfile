@@ -48,8 +48,12 @@ gem 'tty-spinner', '~> 0.9.3'
 
 gem 'rails-i18n', '~> 7.0.0'
 
+#gem 'jquery-rails'
+
+#gem 'notifyjs_rails', '~> 0.0.2'
+
 # Use Sass to process CSS
-# gem "sassc-rails"
+gem "sassc-rails"
 
 # Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html#transforming-images]
 # gem "image_processing", "~> 1.2"
