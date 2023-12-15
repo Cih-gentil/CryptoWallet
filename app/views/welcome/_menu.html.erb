@@ -1,10 +1,8 @@
-<p><strong>Data</strong></p><%= I18n.l(Date.today) %></p>
-
 <ul>
     <li>
-        <%= link_to "Moedas", coins_path %>
+        <%= link_to "#{Coin.model_name.human}", coins_path %>
     </li>
     <li>
-        <%= link_to "Minerações", mining_types_path %>
+        <%= link_to "#{MiningType.model_name.human}" , mining_types_path %>
     </li>
 </ul>

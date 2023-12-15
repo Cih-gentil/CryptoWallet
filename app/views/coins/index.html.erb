@@ -1,7 +1,6 @@
 <p style="color: green"><%= notice %></p>
 
-<h1>Moedas</h1>
-<h2> <%= cookies[:cookie] %> </h2>
+<h1><%= Coin.model_name.human(count: @coins.count) %></h1>
 
 <div id="coins">
   <% @coins.each do |coin| %>

@@ -1,16 +1,16 @@
 <p>
- <%= link_to 'Idioma Português', root_path(locale: 'pt-BR') %>
+ <%= link_to 'Pt-Br', root_path(locale: 'pt-BR') %>
  </p>
  <p>
- <%= link_to 'Idioma Inglês', root_path(locale: 'en') %>
+ <%= link_to 'En', root_path(locale: 'en') %>
  </p>
 
 
-<h1>Sejam Bem-Vindos!</h1>
-<p> O idioma usado nessa aplicação é: <strong> <%= t('actual_locale') %> </strong> </p>
-#<p><%= I18n.t('hello') %> </p>
+<h1><%= t('welcome') %> </h1>
+<p><%= t('welcome_message') %></p>
 
+
+<p><%= t('options') %> </p>
 <%= render "menu" %>
 
-<p> <%= @nome %> </p>
-<p> <%= @curso %> </p>
+
